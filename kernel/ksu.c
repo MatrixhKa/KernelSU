@@ -94,10 +94,6 @@
 #endif
 #endif /* CONFIG_KSU_TAMPER_SYSCALL_TABLE */
 
-#ifdef CONFIG_KSU_EXTRAS
-#include "extras.c"
-#endif
-
 // __weak fn's
 #include "kernel_compat.c"
 
@@ -185,10 +181,6 @@ int __init kernelsu_init(void)
 	ksu_ksud_init();
 
 	ksu_file_wrapper_init();
-
-#ifdef CONFIG_KSU_EXTRAS
-	ksu_avc_spoof_init(); // so the feature is registered
-#endif
 
 	return 0;
 }
