@@ -94,10 +94,6 @@
 #endif
 #endif /* CONFIG_KSU_TAMPER_SYSCALL_TABLE */
 
-#if defined(CONFIG_KSU_KPROBES_KSUD) && !defined(CONFIG_KSU_TAMPER_SYSCALL_TABLE)
-#include "hook/kp_ksud.c"
-#endif
-
 #ifdef CONFIG_KSU_EXTRAS
 #include "extras.c"
 #endif
